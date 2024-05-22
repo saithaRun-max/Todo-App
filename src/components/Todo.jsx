@@ -92,13 +92,13 @@ export default function Todo() {
   };
 
   return (
-    <>
-      <div className="min-h-screen min-w-min place-content-center">
-        <div className="place-content-center m-4 p-1 py-8 border-2 border-blue-400 rounded-md flex justify-around flex-nowrap min-h-full">
-          <div className="w-1/2">
-            <div className="border-2 border-blue-300 m-4 h-10 min-w-52 w-1/3 rounded ">
+    <><div className="px-20 py-6 h-full w-screen bg-white flex justify-center">
+      <div className="">
+        <div className="flex ">
+          <div className="border w-[470px]">
+            <div className="mt-4">
               <input
-                className="min-w-full  min-h-full p-1 focus:outline-none"
+                className=" p-1 px-2 focus:outline-none border-black border w-80 rounded-sm "
                 type="text"
                 name="title"
                 value={title}
@@ -107,9 +107,9 @@ export default function Todo() {
               />
             </div>
 
-            <div className="border-2 border-blue-300 m-4 h-36 w-3/4 min-w-64 rounded">
+            <div className="mt-4">
               <textarea
-                className="min-w-full min-h-full p-1 focus:outline-none"
+                className=" p-2 focus:outline-none border-black border h-28 w-[450px] rounded-sm "
                 name="description"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
@@ -119,16 +119,16 @@ export default function Todo() {
             </div>
           </div>
 
-          <div className="my-2">
-            <label className="font-semibold">Filter :</label>
+          <div className="ml-16">
+            <label className="">Filter :</label>
             <div className="">
-              <div className=" flex flex-wrap ">
-                <div className="flex flex-wrap">
+              <div className="flex ">
+                <div className="">
                   <label>Start Date :</label>
 
-                  <div className="mx-2 border border-black rounded-md h-8">
+                  <div className="">
                     <input
-                      className="m-0.5 focus:outline-none"
+                      className="border border-blue-200 px-2 m-1 focus:outline-none"
                       type="date"
                       id="startDate"
                       value={startDate}
@@ -137,22 +137,24 @@ export default function Todo() {
                     />
                   </div>
                 </div>
-                <div className="flex flex-wrap ml-3">
+                <div className="flex">
+                  <div className="ml-2">
                   <label>End Date :</label>
 
-                  <div className="mx-2 border border-black h-8 rounded-md">
+                  <div className="">
                     <input
-                      className="m-0.5 focus:outline-none"
+                      className="border border-blue-200 px-2 m-1 focus:outline-none"
                       type="date"
                       id="endDate"
                       value={endDate}
                       onChange={(e) => setEndDate(e.target.value)}
                     />
                   </div>
+                  </div>
                   <div>
                     <button
                       onClick={filterTodos}
-                      className="bg-indigo-50 focus:ring-indigo-400 focus:ring border-1 border-indigo text-black font-semibold  border-indigo rounded-md p-1 ml-5 px-3 py-1.5"
+                      className="bg-indigo-50 focus:ring-indigo-400 focus:ring border-1 border-indigo text-black font-semibold  border-indigo rounded-md p-1 mt-6 ml-5 px-3 py-1.5 text-nowrap"
                     >
                       Filter Todos
                     </button>
@@ -160,10 +162,10 @@ export default function Todo() {
                 </div>
               </div>
             </div>
-            <div className="mt-16 ml-96 ">
+            <div className="mt-12 ml-36 ">
               <button
                 onClick={updatevalue}
-                className="bg-sky-500 hover:bg-sky-700  border-2 border-slate-600 text-white font-semibold rounded-md  p-2 px-8 py-2 content-end mt-6 m-4  place-items-end  "
+                className="bg-sky-500 hover:bg-sky-700  text-white font-semibold rounded-md  p-2 px-8 py-2 content-end mt-6 m-4  place-items-end  "
               >
                 Save
               </button>
@@ -171,71 +173,74 @@ export default function Todo() {
           </div>
         </div>
 
-        <div className="flex justify-evenly my-9">
+        <div className=" flex  mx-4 my-3">
           <button
-            className=" bg-indigo-100 focus:ring-indigo-600 focus:ring border-2 border-indogo p-2 px-8 rounded-full py-2"
+            className=" bg-indigo-100 focus:ring-indigo-300 focus:ring border border-indogo p-1 px-5 rounded-full"
             onClick={() => handleWeekdayButtonClick("sunday")}
           >
             SUN
           </button>
           <button
-            className=" bg-indigo-100 focus:ring-indigo-600 focus:ring border-2 border-indogo p-2 px-8 rounded-full py-2"
+            className=" bg-indigo-100 focus:ring-indigo-300 focus:ring border border-indogo p-1 px-5 ml-4 rounded-full"
             onClick={() => handleWeekdayButtonClick("monday")}
           >
             MON
           </button>
           <button
-            className=" bg-indigo-100 focus:ring-indigo-600 focus:ring border-2 border-indogo p-2 px-8 rounded-full py-2"
+            className=" bg-indigo-100 focus:ring-indigo-300 focus:ring border border-indogo p-1 px-5 ml-4 rounded-full"
             onClick={() => handleWeekdayButtonClick("tuesday")}
           >
             TUE
           </button>
           <button
-            className=" bg-indigo-100 focus:ring-indigo-600 focus:ring border-2 border-indogo p-2 px-8 rounded-full py-2"
+            className=" bg-indigo-100 focus:ring-indigo-300 focus:ring border border-indogo p-1 px-5 ml-4 rounded-full"
             onClick={() => handleWeekdayButtonClick("wednesday")}
           >
             WEN
           </button>
           <button
-            className=" bg-indigo-100 focus:ring-indigo-600 focus:ring border-2 border-indogo p-2 px-8 rounded-full py-2"
+            className=" bg-indigo-100 focus:ring-indigo-300 focus:ring border border-indogo p-1 px-5 ml-4 rounded-full"
             onClick={() => handleWeekdayButtonClick("thursday")}
           >
             THU
           </button>
           <button
-            className=" bg-indigo-100 focus:ring-indigo-600 focus:ring border-2 border-indogo p-2 px-8 rounded-full py-2"
+            className=" bg-indigo-100 focus:ring-indigo-300 focus:ring border border-indogo p-1 px-5 ml-4 rounded-full"
             onClick={() => handleWeekdayButtonClick("friday")}
           >
             FRI
           </button>
           <button
-            className=" bg-indigo-100 focus:ring-indigo-600 focus:ring border-2 border-indogo p-2 px-8 rounded-full py-2"
+            className=" bg-indigo-100 focus:ring-indigo-300 focus:ring border border-indogo p-1 px-5 ml-4 rounded-full"
             onClick={() => handleWeekdayButtonClick("saturday")}
           >
             SAT
           </button>
 
           <button
-            className=" bg-indigo-300 focus:ring-indigo-600 focus:ring border-2 border-indogo p-2 px-8 rounded-full py-2"
+            className=" bg-indigo-300 focus:ring-indigo-600 focus:ring border-2 border-indogo p-2 px-8 ml-4 rounded-full py-2"
             onClick={() => handleWeekdayButtonClick("")}
           >
             All
           </button>
         </div>
+
+        <div className="flex flex-wrap ">
         {!isfiltered
           ? todos.map((item) => (
+          
               <div
-                className="border border-blue-500 rounded-md mt-5 flex justify-between m-4"
+                className="border border-blue-300 rounded-md mt-5 flex justify-between m-2 w-[550px]"
                 key={item.id}
               >
                 <div>
-                  <h1 className=" text-2xl p-1 pl-4 font-medium">
+                  <h1 className=" text-lg pl-4 font-medium">
                     {item.title}
                   </h1>
-                  <p className="text-lg p-1 pl-4 text-opacity-75">
+                  <p className="text-base p-1 pl-4 text-opacity-75">
                     {item.description}
                   </p>
-                  <p className="p-1 text-m pl-4 mb-2">Date : {item.date}</p>
+                  <p className="p-1 text-base pl-4 ">Date : {item.date}</p>
                 </div>
                 <div className="mt-12 m-2">
                   <button
@@ -246,21 +251,22 @@ export default function Todo() {
                   </button>
                 </div>
               </div>
+            
             ))
           : filteredTodos.map((item) => {
               return (
                 <div
-                  className="border border-blue-500  rounded-md mt-5 flex justify-between m-4 "
+                className="border border-blue-300 rounded-md mt-5 flex justify-between m-2 w-[550px]"
                   key={item.id}
                 >
                   <div>
-                    <h1 className=" text-2xl p-1 pl-4 font-medium">
+                    <h1 className=" text-lg p-1 pl-4 font-medium">
                       {item.title}
                     </h1>
-                    <p className="text-lg p-1 pl-4 text-opacity-75">
+                    <p className="text-base p-1 pl-4 text-opacity-75">
                       {item.description}
                     </p>
-                    <p className="p-1 text-m pl-4 mb-11">Date : {item.date}</p>
+                    <p className="p-1 text-base pl-4 ">Date : {item.date}</p>
                   </div>
                   <div className="mt-12 m-2">
                     <button
@@ -273,7 +279,9 @@ export default function Todo() {
                 </div>
               );
             })}
-        <p>made by ❤️ Mantra Tecnologies</p>
+              </div>
+        
+      </div>
       </div>
     </>
   );
